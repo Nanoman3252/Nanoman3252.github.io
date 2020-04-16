@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<!--Pagina para Abrirse como PopUp con un poco mas de informacion-->
+<html lang="es">
+	<head>
+		<title>Impresion 3D</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="PopUpEstilo.css">
+		<script>
+			function apagar() {
+				var contenedor = document.getElementById("ContenedorColumna");
+				contenedor.style.visibility = "hidden";
+				contenedor.style.display = "none";
+			}
+
+			function prender() {
+				var contenedor = document.getElementById("ContenedorColumna");
+				contenedor.style.visibility = "visible";
+				contenedor.style.display = "block"
+			}
+			function huevoDePascua(){
+				var LlaveDeEntrada=prompt("Inserte Llave de Entrada: ");
+				//Venir a ver la llave es trampa >:c
+				if (LlaveDeEntrada=='Nanoman3252'){
+					window.open("https://pokedex.org/#/pokemon/133", "_blank", "width=600, height=400, resizable=yes, toolbar=yes, menubar=yes, status=yes, scrollbars=yes");
+				}
+			}
+			function entradaPopUp(){
+				alert("Entro al Pop Up, Sea Bienvenido");
+			}
+			function VerParrafo(caja){
+				alert("Has presionado la" + caja.id);
+			}
+			function focusIn(input) {
+				input.className='enfoco';
+			}
+
+			function blurOut(input) {
+				input.className='';
+			}
+			function DarPassword(){
+				var caja = document.getElementById("caja");	
+				caja.innerHTML = "La contraseña es Nanoman3252";
+			}
+		</script>
+	</head>
+	
+	<body onload="entradaPopUp()">
+		<div id="Agrupar">
+			<nav id="Menu">
+				<div id="Cabecera">
+					<ul>
+						<li><h1>Impresion 3D</h1></li>
+						<li><a href="#AnclaUsoComercial" class="Link">Uso Comercial</a></li>
+						<li><a href="#AnclaUsoDomestico" class="Link">Uso Domestico</a></li>
+						<li><a href="#AnclaVentajas" class="Link">Ventajas de Uso</a></li>
+						<li><a href="#AnclaBibliografia" class="Link">Bibliografia</a></li>
+					</ul>
+				</div>
+			</nav>
+		
+			<section id="Seccion">
+				<h2 id="AnclaUsoComercial" onclick="apagarPrenderUsoComercial()">Uso Comercial</h2>
+					<p id="ParrafoUsoComercial" class="Parrafo" onclick="VerParrafo(this)">
+						<b>Juguetes</b>: Puede que sea una de las cosas más sencillas que se pueden producir con estas máquinas. Aún así, estos juguetes pueden cumplir todos los deseos de los más pequeños, ya que ellos mismos pueden diseñarlos. De este modo, los más pequeños serán los que decidan las características de sus propios juguetes.
+						<br/>
+						<b>Protesis Médica</b>: Quizá sea una de las mejores cosas que pueden imprimir estas máquinas. Actualmente ya se han impreso prótesis para personas discapacitadas, con la ventaja de que éstas se pueden diseñar a medida para cubrir las necesidades de cada paciente. Además, se están comenzando a imprimir réplicas de órganos humanos, de tejido totalmente compatible.
+						<br/>
+						<b>Ropa</b>: Aunque parezca sorprendente dada la rigidez del plástico, las impresoras 3D permiten la creación de ropa a medida. Ya lo han demostrado algunas estrellas luciendo vestidos de plástico realizados con estas impresoras. 
+						<br/>
+						<b>Comida</b>: Aparte del plástico rígido con el que se componen las figuras 3D, también se pueden imprimir estructuras temporales de materiales comestibles. <br/> En 2016 se inauguró en Londres el primer restaurante de comida impresa en 3D, Food Ink. En él, cocineros e ingenieros trabajan conjuntamente para crear platos realmente sorprendentes. Para los más atrevidos, el precio del menú ronda los 250€.Comida impresa en 3D.
+						<br/>
+						<b>Casas</b>: Por sorprendente que parezca, se pueden construir casas utilizando impresoras 3D. Para ello, se ha investigado sobre materiales especiales que puedan modelar estas máquinas. Aunque sea un proceso lento, ya es posible. <br/> En Rusia, la empresa Apis Cor demostró que se podía crear una casa de esta manera en menos de un día. La casa cuenta con 36 metros cuadrados y tienen una resistencia de 175 años.Cómo impresora 3D construye una casa.
+						<br/><br/>
+					</p>
+				<h2 id="AnclaUsoDomestico" onclick="apagarPrenderUsoDomestico()">Uso Domestico</h2>
+					<p id="ParrafoUsoDomestico" class="Parrafo" onclick="VerParrafo(this)">
+						<b>Adornos Navideños</b>: Estas Navidades, la decoración corre a cargo de nuestra impresora 3D. Gracias a diseños muy elaborados que están disponibles en Internet (en formato STL), podremos recrear escenas típicas de estas fechas, con aldeanos, renos y, por supuesto, con un fabuloso árbol impreso en tres dimensiones que podremos adornar con sus correspondientes bolas, también producidas en nuestro propio hogar.
+						<br/>
+						<b>Cerraduras bien seguras</b>: Siguiendo por el lado práctico de la impresión 3D en el hogar, os proponemos fabricar una nueva cerradura deslizante para vuestra puerta principal. Escalable a distintos tamaños (para adaptarse a las dimensiones de puerta y marco), este diseño nos permite aumentar la seguridad de nuestra vivienda con apenas un par de clicks.
+						<br/>
+						<b>Jarrones en Espiral</b>: La impresión 3D puede convertirse en el mejor sustituto de Ikea a la hora de decorar nuestra casa, al fabricar pequeños objetos tan elegantes y modernos como estos jarrones en forma de espiral que, con unas pequeñas modificaciones, también se pueden convertir en lámparas de diseño.
+						<br/><br/>
+					</p>
+				<h2 id="AnclaVentajas"><a onclick="apagarPrenderVentajas()">Ventajas de Uso</a></h2>
+					<ol id="ParrafoVentajas" class="Parrafo" onclick="VerParrafo(this)">
+						 <li><b>Flexibilidad y prototipado rápido.</b> Permite realizar prototipos de productos con facilidad, lo que puede implicar una mejora en el diseño.</li>
+						 <li><b>Reducción de costes.</b> La producción puede realizarse desde casa.</li>
+						 <li><b>Personalización</b> La posibilidad de realizar tus propias prendas, objetos, productos… de forma personalizada y exclusiva.</li>
+					</ol><br/><br/>
+				<h2 id="AnclaDesventajas" onclick="apagarPrenderDesventajas()">Desventajas de uso</h2>
+					<ol id="ParrafoDesventajas" class="Parrafo" onclick="VerParrafo(this)">
+						<li><b>Disminución de puesto de trabajo.</b> La elaboración propia de los productos, y la disminución de maquinaria puede conllevar menos puestos de trabajo en la manufactura.</li>
+						<li><b>Vulneración de los derechos de autor.</b> La réplica de objetos con copyright, será difícil de controlar pues los escáneres 3D permiten la réplica de cualquier objeto.</li>
+						<li><b>Usos malintencionados de la tecnología.</b> Lamentablemente, existe la posibilidad de crear objetos tales como armas de fuego, y el peligro de generalizar este tipo de objetos.</li>
+					</ol><br/><br/>
+				<h2 id="AnclaBibliografia" onclick="apagarPrenderBibliografia()">Bibliografia</h2>
+					<ul id="ParrafoBibliografia" class="Parrafo" onclick="VerParrafo(this)">
+						<li><a class="Link" href="https://playcodeacademy.com/impresora-3d-usos-mas-sorprendentes/">https://playcodeacademy.com/</a></li>
+						<li><a class="Link" href="https://computerhoy.com/noticias/life/bq--5-usos-domesticos-impresion-3d-53186">https://computerhoy.com</a></li>
+						<li><a class="Link" href="https://imprime3dbarato.com/las-ventajas-y-desventajas-de-la-impresion-3d/">https://imprime3dbarato.com</a></li>
+					</ul>
+				<p id="IdUnica">Nombre: </p> <input type="text" onfocus="focusIn(this)" onblur="blurOut()" id="TxtNombre">
+				<br/> <input type="button" value="Confirmar Nombre" onclick="DarPassword()">
+				<div id="caja"></div>
+			</section>
+			
+			<aside id="Columna">
+				<input type="button" value="Mostrar Columna Lateral" onclick="prender()">
+				<input type="button" value="Ocultar Columna Lateral" onclick="apagar()">
+				<div id="ContenedorColumna">
+				<img src = "Imagen1.jpg" alt="Imagen de la nanotecnologia" height=170px width=340px/>
+						<p class="PieImagen">Cerradura hecha en casa mediante las impresoras 3D que pueden ser obtenidas para usao domestico</p>
+				<img src = "Imagen2.jpg" alt="Imagen de la nanotecnologia" height=170px width=340px/>
+						<p class="PieImagen">Jarrones hechos con impresión 3D para adornar la casa</p>
+				<img src = "Imagen3.jpg" alt="Imagen de la nanotecnologia" height=170px width=340px/>
+						<p class="PieImagen">Juguetes los cuales han podido fabricarse mas rápido y diseñarse mas rápido</p>
+				<img src = "Imagen4.jpg" alt="Imagen de la nanotecnologia" height=170px width=340px/>
+						<p class="PieImagen">Comida hecha con impresion 3D pero no dura mucho en forma, es decir, se deforma facilmente ya que la forma es endeble</p>
+				<img src = "Imagen5.jpg" alt="Imagen de la nanotecnologia" height=170px width=340px/>
+						<p class="PieImagen">Muchos materiales de casa se hacen con impresion 3D hoy en dia ya que quedan mejor, a la medida y mas rapido</p>
+				<img src = "Imagen6.jpg" alt="Imagen de la nanotecnologia" height=170px width=340px/>
+						<p class="PieImagen">Algunos adornos para navidad que tambien resultan como una buena idea para la impresion 3D</p>
+				</div>
+			</aside>
+			
+			<footer id="Pie">
+				<p class="TextoPiePagina">Pagina Hecha por <a onclick="huevoDePascua()">Navarro Barrón César de Jesús</a></p>
+			</footer>
+		</div>
+	</body>
+</html>
